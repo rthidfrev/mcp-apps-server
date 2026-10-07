@@ -1,0 +1,6 @@
+/target/
+/.local/
+/demos/
+.env
+.env.*
+!.env.example

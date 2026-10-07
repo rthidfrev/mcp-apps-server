@@ -1,0 +1,20 @@
+[package]
+name = "mcp-apps-server-macros"
+version = "0.1.0-alpha.1"
+edition = "2024"
+rust-version = "1.88"
+description = "Optional resource and application routing macros for MCP Apps Server"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/rthidfrev/mcp-apps-server"
+documentation = "https://docs.rs/mcp-apps-server-macros"
+include = ["/src/**", "/Cargo.toml", "/README.md", "/LICENSE-MIT"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+fluent-uri = { version = "0.4.1", default-features = false, features = ["alloc", "impl-error"] }
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "2", features = ["full"] }

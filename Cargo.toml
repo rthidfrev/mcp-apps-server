@@ -1,0 +1,55 @@
+[package]
+name = "mcp-apps-server"
+version = "0.1.0-alpha.1"
+edition = "2024"
+rust-version = "1.88"
+description = "Typed MCP Apps registration and server integration for rmcp"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/rthidfrev/mcp-apps-server"
+documentation = "https://docs.rs/mcp-apps-server"
+keywords = ["mcp", "mcp-apps", "rmcp"]
+categories = ["development-tools"]
+include = [
+    "/src/**",
+    "/tests/**",
+    "/examples/**",
+    "/Cargo.toml",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/AGENTS.md",
+    "/RELEASING.md",
+    "/LICENSE-MIT",
+]
+
+[workspace]
+members = ["derive"]
+resolver = "3"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[features]
+default = []
+server = ["rmcp/server"]
+macros = ["dep:mcp-apps-server-macros"]
+derive = ["macros"]
+
+[dependencies]
+fluent-uri = { version = "0.4.1", default-features = false, features = ["alloc", "impl-error"] }
+rmcp = { version = "3.4.1", default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+mcp-apps-server-macros = { version = "=0.1.0-alpha.1", path = "derive", optional = true }
+
+[[example]]
+name = "server"
+required-features = ["server", "macros"]
+
+[[example]]
+name = "custom_server"
+required-features = ["server"]
+
+[dev-dependencies]
+rmcp = { version = "3.4.1", default-features = false, features = ["server", "client", "macros", "transport-io"] }
+tokio = { version = "1.0", features = ["macros", "rt", "io-util", "time"] }
