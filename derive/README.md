@@ -1,8 +1,9 @@
 # MCP Apps Server Macros
 
-Alpha `0.1.0-alpha.1`: optional procedural macros for the `mcp-apps-server` Rust
-library. Consumers normally use the library's reexports rather than depend on
-this package directly.
+Alpha `0.1.0-alpha.1`: optional procedural macros for the
+[`mcp-apps-server` Rust library](https://crates.io/crates/mcp-apps-server).
+Consumers normally use the library's reexports rather than depend on this package
+directly.
 Select the alpha through the runtime library's reexports:
 
 ```toml

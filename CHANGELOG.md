@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0-alpha.1
+## [0.1.0-alpha.1](https://github.com/rthidfrev/mcp-apps-server/tree/v0.1.0-alpha.1) - 2026-10-08
 
 Initial alpha of `mcp-apps-server` and its optional `mcp-apps-server-macros` package.
 

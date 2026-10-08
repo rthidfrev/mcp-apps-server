@@ -1,8 +1,13 @@
 # MCP Apps Server
 
+[![crates.io](https://img.shields.io/crates/v/mcp-apps-server.svg)](https://crates.io/crates/mcp-apps-server)
+[![docs.rs](https://img.shields.io/docsrs/mcp-apps-server.svg?label=docs.rs)](https://docs.rs/mcp-apps-server/latest/mcp_apps_server/)
+
 A Rust SDK for registering [MCP Apps](https://modelcontextprotocol.io/extensions/apps/overview)
 with `rmcp`. Declare typed tools and HTML resources, associate them once, and use
 a ready server or the same router inside your existing server.
+
+[Source repository](https://github.com/rthidfrev/mcp-apps-server).
 
 > **Alpha: `0.1.0-alpha.1`.** Tested manually on **ChatGPT Desktop 26.930.61225**
 > only. Compatibility with other hosts and exhaustive feature coverage have not
@@ -27,9 +32,9 @@ The examples below describe the same inventory application. The
 
 ## Getting started
 
-Add the alpha release to your consuming server's `Cargo.toml`. Pin the candidate
-explicitly: API compatibility between alpha candidates is not promised. Select
-rmcp's macros and transport separately:
+Add the published alpha release to your consuming server's `Cargo.toml`. Pin the
+prerelease version explicitly: API compatibility between alpha releases is not
+promised. Select rmcp's macros and transport separately:
 
 ```toml
 [dependencies]
